@@ -1052,7 +1052,7 @@ VID_ERROR_E NX_VidDecParseVideoCfg(NX_VID_DEC_HANDLE hDec, NX_VID_SEQ_IN *pstSeq
 		hDec->seqDataSize = ( pstSeqIn->seqSize < 2048 ) ? ( pstSeqIn->seqSize ) : ( 2048 );
 		memcpy (hDec->pSeqData, pstSeqIn->seqInfo, hDec->seqDataSize);
 
-		if ( (hDec->codecStd == CODEC_STD_MPEG4) && ( hDec->pSeqData != NULL) && (hDec->seqDataSize > 0) )
+		if ( (hDec->codecStd == CODEC_STD_MPEG4) && (hDec->seqDataSize > 0) )
 			Mp4DecParserVideoCfg( hDec );
 
 		if ( pstSeqIn->seqSize == 0 )
